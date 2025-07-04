@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w23CUBedPLA=",
+  "dgSpecHash": "Fd8CbUuVEoc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\felipe.rozzi\\Documents\\Me\\FitBack\\FitBack.csproj",
+  "projectFilePath": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\FitBack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\felipe.rozzi\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\felipe.rozzi\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.6\\microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
