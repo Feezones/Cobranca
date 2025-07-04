@@ -1,0 +1,89 @@
+[
+  {
+    "ContainingType": "FitBack.Controllers.DividaEndpoints\u002B\u003C\u003Ec__DisplayClass0_0",
+    "Method": "\u003CMapDividaEndpoints\u003Eb__0",
+    "RelativePath": "dividas",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FitBack.Controllers.DividaEndpoints\u002B\u003C\u003Ec__DisplayClass0_0",
+    "Method": "\u003CMapDividaEndpoints\u003Eb__1",
+    "RelativePath": "dividas",
+    "HttpMethod": "POST",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "divida",
+        "Type": "FitBack.Models.Divida",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FitBack.Controllers.DividaEndpoints\u002B\u003C\u003Ec__DisplayClass0_0",
+    "Method": "\u003CMapDividaEndpoints\u003Eb__2",
+    "RelativePath": "dividas/{id}",
+    "HttpMethod": "PUT",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "divida",
+        "Type": "FitBack.Models.Divida",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "FitBack.Controllers.DividaEndpoints\u002B\u003C\u003Ec__DisplayClass0_0",
+    "Method": "\u003CMapDividaEndpoints\u003Eb__3",
+    "RelativePath": "dividas/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
