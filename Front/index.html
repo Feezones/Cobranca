@@ -17,7 +17,15 @@
             <input type="text" class="form-control" placeholder="Nome da Dívida" id="nome" required>
         </div>
         <div class="col-md-3">
-            <input type="text" class="form-control" placeholder="Origem" id="origem" required>
+            <select class="form-control" id="origem" required>
+            <option value="">Selecione a origem</option>
+            <option value="Cartão de Crédito">Cartão de Crédito</option>
+            <option value="Boleto">Boleto</option>
+            <option value="Aluguel">Aluguel</option>
+            <option value="Empréstimo">Empréstimo</option>
+            <option value="Financiamento">Financiamento</option>
+            <option value="Outros">Outros</option>
+            </select>
         </div>
         <div class="col-md-2">
             <input type="number" class="form-control" placeholder="Valor Total" id="valorTotal" required>
