@@ -1,6 +1,7 @@
+using FitBack.Controllers;
 using FitBack.DataBase;
 using FitBack.Repositories;
-using FitBack.Controllers;
+using FitBack.Services;
 
 SQLitePCL.Batteries.Init();
 
@@ -21,6 +22,11 @@ builder.Services.AddCors(options =>
     });
 });
 
+builder.Services.AddSingleton(new UsuarioRepository(connectionString));
+builder.Services.AddSingleton(new DividaRepository(connectionString));
+builder.Services.AddSingleton(new JwtService("sua-chave-super-secreta-aqui")); // Troque por algo forte
+
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -34,7 +40,7 @@ var app = builder.Build();
 app.UseCors("AllowAll");
 
 // Mapeia os endpoints
-app.MapDividaEndpoints(repository);
+app.MapControllers();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

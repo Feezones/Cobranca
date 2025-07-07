@@ -1,36 +1,46 @@
 ﻿using FitBack.Models;
 using FitBack.Repositories;
+using Microsoft.AspNetCore.Mvc;
 
-namespace FitBack.Controllers
+namespace FinanceControl.Controllers;
+
+[ApiController]
+[Route("api/[controller]")]
+public class DividasController : ControllerBase
 {
-    public static class DividaEndpoints
+    private readonly DividaRepository _repository;
+
+    public DividasController(DividaRepository repository)
     {
-        public static void MapDividaEndpoints(this WebApplication app, DividaRepository repository)
-        {
-            app.MapGet("/dividas", () =>
-            {
-                var dividas = repository.GetAll();
-                return Results.Ok(dividas);
-            });
+        _repository = repository;
+    }
 
-            app.MapPost("/dividas", (Divida divida) =>
-            {
-                repository.Add(divida);
-                return Results.Created($"/dividas/{divida.Id}", divida);
-            });
+    [HttpGet]
+    public IActionResult GetAll()
+    {
+        var dividas = _repository.GetAll();
+        return Ok(dividas);
+    }
 
-            app.MapPut("/dividas/{id}", (int id, Divida divida) =>
-            {
-                divida.Id = id;
-                repository.Update(divida);
-                return Results.NoContent();
-            });
+    [HttpPost]
+    public IActionResult Create(Divida divida)
+    {
+        _repository.Add(divida);
+        return CreatedAtAction(nameof(GetAll), new { id = divida.Id }, divida);
+    }
 
-            app.MapDelete("/dividas/{id}", (int id) =>
-            {
-                repository.Delete(id);
-                return Results.NoContent();
-            });
-        }
+    [HttpPut("{id}")]
+    public IActionResult Update(int id, Divida divida)
+    {
+        divida.Id = id;
+        _repository.Update(divida);
+        return NoContent();
+    }
+
+    [HttpDelete("{id}")]
+    public IActionResult Delete(int id)
+    {
+        _repository.Delete(id);
+        return NoContent();
     }
 }
