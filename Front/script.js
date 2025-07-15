@@ -1,3 +1,8 @@
+if (!localStorage.getItem('token')) {
+  window.location.href = 'login.html';
+}
+
+
 const apiUrl = 'https://localhost:7047/dividas'; // Altere se precisar
 
 document.addEventListener('DOMContentLoaded', loadDividas);
@@ -56,13 +61,21 @@ async function saveDivida(e) {
         if (editandoId) {
             response = await fetch(`${apiUrl}/${editandoId}`, {
                 method: 'PUT',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('token'),
+                'Content-Type': 'application/json'
+                }
+                ,
                 body: JSON.stringify(divida)
             });
         } else {
             response = await fetch(apiUrl, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('token'),
+                'Content-Type': 'application/json'
+                }
+                ,
                 body: JSON.stringify(divida)
             });
         }
@@ -125,3 +138,10 @@ function formatarData(dataString) {
     const data = new Date(dataString);
     return data.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
 }
+
+
+function logout() {
+  localStorage.removeItem('token');
+  window.location.href = 'login.html';
+}
+

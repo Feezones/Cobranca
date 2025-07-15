@@ -1,9 +1,11 @@
 ﻿using FitBack.Models;
 using FitBack.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FinanceControl.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class DividasController : ControllerBase
@@ -18,7 +20,8 @@ public class DividasController : ControllerBase
     [HttpGet]
     public IActionResult GetAll()
     {
-        var dividas = _repository.GetAll();
+        int userId = int.Parse(User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)!.Value);
+        var dividas = _repository.GetByUser(userId);
         return Ok(dividas);
     }
 

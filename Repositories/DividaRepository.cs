@@ -13,10 +13,10 @@ namespace FitBack.Repositories
             _connectionString = connectionString;
         }
 
-        public IEnumerable<Divida> GetAll()
+        public IEnumerable<Divida> GetByUser(int userId)
         {
             using var connection = new SqliteConnection(_connectionString);
-            return connection.Query<Divida>("SELECT * FROM Dividas");
+            return connection.Query<Divida>("SELECT * FROM Dividas WHERE UserId = @UserId", new { UserId = userId });
         }
 
         public void Add(Divida divida)

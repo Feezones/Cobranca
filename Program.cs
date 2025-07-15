@@ -2,6 +2,9 @@ using FitBack.Controllers;
 using FitBack.DataBase;
 using FitBack.Repositories;
 using FitBack.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 SQLitePCL.Batteries.Init();
 
@@ -11,6 +14,23 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 // Inicializa o banco
 DbInitializer.Initialize(connectionString);
+
+var jwtKey = "sua-chave-super-secreta-aqui"; // Pode colocar no appsettings se quiser
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey)),
+            ClockSkew = TimeSpan.Zero
+        };
+    });
+
+builder.Services.AddAuthorization();
 
 builder.Services.AddCors(options =>
 {
@@ -24,7 +44,7 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddSingleton(new UsuarioRepository(connectionString));
 builder.Services.AddSingleton(new DividaRepository(connectionString));
-builder.Services.AddSingleton(new JwtService("sua-chave-super-secreta-aqui")); // Troque por algo forte
+builder.Services.AddSingleton(new JwtService(jwtKey)); // Troque por algo forte
 
 
 // Add services to the container.
@@ -36,6 +56,9 @@ builder.Services.AddOpenApi();
 var repository = new DividaRepository(connectionString);
 
 var app = builder.Build();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.UseCors("AllowAll");
 
