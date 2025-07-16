@@ -38,21 +38,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 158,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 9,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DividaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\Repositories\\DividaRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\DividaRepository.cs",
-              "ToolTip": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\Repositories\\DividaRepository.cs",
-              "RelativeToolTip": "Repositories\\DividaRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-15T19:44:18.683Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
@@ -91,6 +78,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DividaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\Repositories\\DividaRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\DividaRepository.cs",
+              "ToolTip": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\Repositories\\DividaRepository.cs",
+              "RelativeToolTip": "Repositories\\DividaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T19:44:18.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\Program.cs",
@@ -99,8 +99,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAC4AAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T13:38:21.869Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T13:38:21.869Z"
             },
             {
               "$type": "Document",
@@ -112,8 +111,7 @@
               "RelativeToolTip": "Services\\JwtService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T13:34:51.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T13:34:51.192Z"
             },
             {
               "$type": "Document",
@@ -125,8 +123,7 @@
               "RelativeToolTip": "Repositories\\UsuarioRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T13:33:50.528Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T13:33:50.528Z"
             },
             {
               "$type": "Document",
@@ -138,8 +135,7 @@
               "RelativeToolTip": "Models\\Usuario.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T13:31:08.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T13:31:08.689Z"
             },
             {
               "$type": "Document",
@@ -151,8 +147,7 @@
               "RelativeToolTip": "Controllers\\AuthController.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAIAwwCUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T13:30:56.513Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T13:30:56.513Z"
             },
             {
               "$type": "Document",
@@ -164,8 +159,7 @@
               "RelativeToolTip": "Controllers\\DividaController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-07T13:29:27.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-07T13:29:27.288Z"
             }
           ]
         }
