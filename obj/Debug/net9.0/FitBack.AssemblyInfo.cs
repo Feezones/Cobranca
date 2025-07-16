@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FitBack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47598df1efb9f8fb08af2c14cd39b17a20ce5172")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b0661a521fb138df8d15caced81a8bb0a3e7c732")]
 [assembly: System.Reflection.AssemblyProductAttribute("FitBack")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FitBack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
