@@ -12,6 +12,7 @@ namespace FitBack.Repositories
         public Usuario? GetByEmail(string email)
         {
             using var connection = new SqliteConnection(_connectionString);
+            connection.Open();
             return connection.QueryFirstOrDefault<Usuario>("SELECT * FROM Usuarios WHERE Email = @Email", new { Email = email });
         }
 

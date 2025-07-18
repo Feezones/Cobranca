@@ -4,7 +4,7 @@ document.getElementById('loginForm').addEventListener('submit', async function (
   const email = document.getElementById('email').value;
   const senha = document.getElementById('senha').value;
 
-    const res = await fetch('https://controlefinanceiroturbinado-fxdsh6guc8grd3d3.brazilsouth-01.azurewebsites.net/api/auth/login', {
+    const res = await fetch('https://localhost:7047/api/auth/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ nome: '', email: email, senhaHash: senha })
