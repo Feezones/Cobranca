@@ -12,6 +12,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
+//var allowedOrigins = builder.Configuration["AllowedOrigins"];
+
 // Inicializa o banco
 DbInitializer.Initialize(connectionString);
 

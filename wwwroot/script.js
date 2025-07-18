@@ -3,7 +3,7 @@ if (!localStorage.getItem('token')) {
 }
 
 
-const apiUrl = 'https://localhost:7047/dividas'; // Altere se precisar
+const apiUrl = 'https://controlefinanceiroturbinado-fxdsh6guc8grd3d3.brazilsouth-01.azurewebsites.net/dividas'; // Altere se precisar
 
 document.addEventListener('DOMContentLoaded', loadDividas);
 document.getElementById('dividaForm').addEventListener('submit', saveDivida);
