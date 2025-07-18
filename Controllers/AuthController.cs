@@ -32,7 +32,7 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("login")]
-    public IActionResult Login([FromBody] Usuario login)
+    public IActionResult Login(Usuario login)
     {
         var user = _userRepo.GetByEmail(login.Email);
         if (user == null || !VerifyPassword(login.SenhaHash, user.SenhaHash))
