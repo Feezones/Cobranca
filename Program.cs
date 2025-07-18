@@ -71,6 +71,10 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
+app.UseDefaultFiles(); // Procura automaticamente por index.html
+app.UseStaticFiles();  // Serve arquivos da wwwroot
+
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();

@@ -16,4 +16,12 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.12.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\auth\login\login.html" />
+    <None Include="wwwroot\auth\login\login.js" />
+    <None Include="wwwroot\index.html" />
+    <None Include="wwwroot\script.js" />
+    <None Include="wwwroot\style.css" />
+  </ItemGroup>
+
 </Project>

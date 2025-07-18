@@ -1,0 +1,10 @@
+wwwroot\auth\login\login.html
+wwwroot\auth\login\login.js
+wwwroot\index.html
+wwwroot\script.js
+wwwroot\style.css
+C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\auth\login\login.html
+C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\auth\login\login.js
+C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\index.html
+C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\script.js
+C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\style.css
