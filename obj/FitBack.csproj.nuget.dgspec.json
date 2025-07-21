@@ -66,7 +66,7 @@
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[9.0.6, )"
+              "version": "[9.0.7, )"
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
@@ -74,7 +74,7 @@
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
-              "version": "[8.12.1, )"
+              "version": "[8.13.0, )"
             }
           },
           "imports": [
