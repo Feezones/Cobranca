@@ -11,5 +11,6 @@
         public decimal ValorParcela { get; set; }
         public DateTime DataPagamento { get; set; }
         public DateTime ProximoVencimento { get; set; }
+        public int UserId { get; set; }
     }
 }

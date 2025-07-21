@@ -21,25 +21,38 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("register")]
-    public IActionResult Register([FromBody] Usuario user)
+    public async Task<IActionResult> Register(RegisterRequest dto)
     {
-        if (_userRepo.GetByEmail(user.Email) != null)
-            return BadRequest("Email já cadastrado.");
+        if (await _userRepo.EmailExiste(dto.Email))
+            return BadRequest("E-mail já cadastrado.");
 
-        user.SenhaHash = HashPassword(user.SenhaHash);
-        _userRepo.Add(user);
-        return Ok("Usuário registrado com sucesso.");
+        var usuario = new Usuario
+        {
+            Nome = dto.Nome,
+            Email = dto.Email,
+            SenhaHash = HashPassword(dto.Senha)
+        };
+
+        await _userRepo.Criar(usuario);
+
+        return Ok();
     }
+
+
 
     [HttpPost("login")]
     public IActionResult Login(Usuario login)
     {
         var user = _userRepo.GetByEmail(login.Email);
-        if (user == null || !VerifyPassword(login.SenhaHash, user.SenhaHash))
+
+        if (user == null)
+            return Unauthorized("Usuário ou senha inválidos.");
+
+        if (!VerifyPassword(login.SenhaHash, user.SenhaHash))
             return Unauthorized("Usuário ou senha inválidos.");
 
         var token = _jwtService.GenerateToken(user.Id, user.Nome);
-        return Ok(new { Token = token });
+        return Ok(new { Token = token, UserId = user.Id });
     }
 
     private static string HashPassword(string password)

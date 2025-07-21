@@ -24,8 +24,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "FitBack.Models.Usuario",
+        "Name": "dto",
+        "Type": "FitBack.Models.RegisterRequest",
         "IsRequired": true
       }
     ],

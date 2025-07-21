@@ -1,17 +1,26 @@
 if (!localStorage.getItem('token')) {
-  window.location.href = 'auth/login/login.html';
+    window.location.href = 'auth/login/login.html';
 }
 
 
-const apiUrl = 'https://localhost:7047/dividas'; // Altere se precisar
+const apiUrl = 'https://localhost:7047/api/dividas'; // Altere se precisar
 
 document.addEventListener('DOMContentLoaded', loadDividas);
 document.getElementById('dividaForm').addEventListener('submit', saveDivida);
 
 
 async function loadDividas() {
-    const res = await fetch(apiUrl);
+
+    const res = await fetch(`${apiUrl}`, {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + localStorage.getItem('token'),
+            'Content-Type': 'application/json',
+        }
+    });
+
     const dividas = await res.json();
+
 
     const tbody = document.querySelector('#dividasTable tbody');
     tbody.innerHTML = '';
@@ -19,8 +28,8 @@ async function loadDividas() {
     let totalMes = 0;
 
     dividas.forEach(d => {
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
         <td>${d.nome}</td>
         <td>${d.origem}</td>
         <td>R$ ${d.valorTotal.toFixed(2)}</td>
@@ -34,9 +43,9 @@ async function loadDividas() {
             <button class="btn btn-sm btn-danger" onclick="deletarDivida(${d.id})">Excluir</button>
         </td>
     `;
-    tbody.appendChild(tr);
-    totalMes += d.valorParcela;
-});
+        tbody.appendChild(tr);
+        totalMes += d.valorParcela;
+    });
 
 
     document.getElementById('totalParcelasValor').textContent = `R$ ${totalMes.toFixed(2)}`;
@@ -53,8 +62,10 @@ async function saveDivida(e) {
         parcelaAtual: parseInt(document.getElementById('parcelaAtual').value),
         valorParcela: parseFloat(document.getElementById('valorParcela').value),
         dataPagamento: document.getElementById('dataPagamento').value,
-        proximoVencimento: document.getElementById('proximoVencimento').value
+        proximoVencimento: document.getElementById('proximoVencimento').value,
+        userId: localStorage.getItem('userId') // pega do localStorage
     };
+
 
     try {
         let response;
@@ -62,8 +73,8 @@ async function saveDivida(e) {
             response = await fetch(`${apiUrl}/${editandoId}`, {
                 method: 'PUT',
                 headers: {
-                'Authorization': 'Bearer ' + localStorage.getItem('token'),
-                'Content-Type': 'application/json'
+                    'Authorization': 'Bearer ' + localStorage.getItem('token'),
+                    'Content-Type': 'application/json'
                 }
                 ,
                 body: JSON.stringify(divida)
@@ -72,8 +83,8 @@ async function saveDivida(e) {
             response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {
-                'Authorization': 'Bearer ' + localStorage.getItem('token'),
-                'Content-Type': 'application/json'
+                    'Authorization': 'Bearer ' + localStorage.getItem('token'),
+                    'Content-Type': 'application/json'
                 }
                 ,
                 body: JSON.stringify(divida)
@@ -141,7 +152,7 @@ function formatarData(dataString) {
 
 
 function logout() {
-  localStorage.removeItem('token');
-  window.location.href = 'login.html';
+    localStorage.removeItem('token');
+    window.location.href = 'login.html';
 }
 

@@ -6,18 +6,17 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-SQLitePCL.Batteries.Init();
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+var connectionString = builder.Configuration.GetConnectionString("LocalConnection");
 
 //var allowedOrigins = builder.Configuration["AllowedOrigins"];
 
 // Inicializa o banco
-DbInitializer.Initialize(connectionString);
+//DbInitializer.Initialize(connectionString);
 
-var jwtKey = "sua-chave-super-secreta-aqui"; // Pode colocar no appsettings se quiser
+var jwtKey = "sua-chave-super-secreta-com-32-caracteres!"; // Pode colocar no appsettings se quiser
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>

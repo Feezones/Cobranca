@@ -1,6 +1,6 @@
 ﻿using Dapper;
 using FitBack.Models;
-using Microsoft.Data.Sqlite;
+using Microsoft.Data.SqlClient;
 
 namespace FitBack.Repositories
 {
@@ -11,15 +11,26 @@ namespace FitBack.Repositories
 
         public Usuario? GetByEmail(string email)
         {
-            using var connection = new SqliteConnection(_connectionString);
+            using var connection = new SqlConnection(_connectionString);
             connection.Open();
             return connection.QueryFirstOrDefault<Usuario>("SELECT * FROM Usuarios WHERE Email = @Email", new { Email = email });
         }
 
-        public void Add(Usuario usuario)
+        public async Task Criar(Usuario usuario)
         {
-            using var connection = new SqliteConnection(_connectionString);
-            connection.Execute(@"INSERT INTO Usuarios (Nome, Email, SenhaHash) VALUES (@Nome, @Email, @SenhaHash)", usuario);
+            using var connection = new SqlConnection(_connectionString);
+            await connection.ExecuteAsync(
+                @"INSERT INTO Usuarios (Nome, Email, SenhaHash)
+              VALUES (@Nome, @Email, @SenhaHash)", usuario);
+        }
+
+        public async Task<bool> EmailExiste(string email)
+        {
+            using var connection = new SqlConnection(_connectionString);
+            var result = await connection.QueryFirstOrDefaultAsync<Usuario>(
+                "SELECT * FROM Usuarios WHERE Email = @Email", new { Email = email });
+
+            return result != null;
         }
     }
 }

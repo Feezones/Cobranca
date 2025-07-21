@@ -68,13 +68,9 @@
               "target": "Package",
               "version": "[9.0.6, )"
             },
-            "Microsoft.Data.Sqlite.Core": {
+            "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[9.0.6, )"
-            },
-            "SQLitePCLRaw.bundle_e_sqlite3": {
-              "target": "Package",
-              "version": "[2.1.11, )"
+              "version": "[6.0.2, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
