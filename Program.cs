@@ -9,7 +9,7 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("LocalConnection");
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
 var jwtKey = "sua-chave-super-secreta-com-32-caracteres!"; // Pode colocar no appsettings se quiser
 

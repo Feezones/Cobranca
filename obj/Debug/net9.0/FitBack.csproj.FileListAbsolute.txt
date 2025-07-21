@@ -143,4 +143,4 @@ C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\refint\FitBack.
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\FitBack.pdb
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\FitBack.genruntimeconfig.cache
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\ref\FitBack.dll
-C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\cj3rn6iqt0-bztkfzee39.gz
+C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\cj3rn6iqt0-s0gyqe07s4.gz
