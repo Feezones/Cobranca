@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|c:\\users\\felipe.rozzi\\documents\\github\\cobranca\\wwwroot\\auth\\cadastro\\cadastro.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|solutionrelative:wwwroot\\auth\\cadastro\\cadastro.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|c:\\users\\felipe.rozzi\\documents\\github\\cobranca\\wwwroot\\auth\\login\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|solutionrelative:wwwroot\\auth\\login\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|c:\\users\\felipe.rozzi\\documents\\github\\cobranca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +22,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 148,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "login.html",
+              "DocumentMoniker": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\wwwroot\\auth\\login\\login.html",
+              "RelativeDocumentMoniker": "wwwroot\\auth\\login\\login.html",
+              "ToolTip": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\wwwroot\\auth\\login\\login.html",
+              "RelativeToolTip": "wwwroot\\auth\\login\\login.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-21T20:51:46.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "cadastro.html",
+              "DocumentMoniker": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\wwwroot\\auth\\cadastro\\cadastro.html",
+              "RelativeDocumentMoniker": "wwwroot\\auth\\cadastro\\cadastro.html",
+              "ToolTip": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\wwwroot\\auth\\cadastro\\cadastro.html",
+              "RelativeToolTip": "wwwroot\\auth\\cadastro\\cadastro.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-21T20:51:34.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-21T20:05:22.716Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"

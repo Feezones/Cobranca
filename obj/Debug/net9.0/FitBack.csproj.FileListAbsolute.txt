@@ -127,7 +127,6 @@ C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\FitBack.MvcAppl
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\FitBack.sourcelink.json
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\scopedcss\bundle\FitBack.styles.css
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\5nm4oqqe6q-197hosvljq.gz
-C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\cj3rn6iqt0-cc9jlkji35.gz
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\9lsmm3hczz-9gs8ktddhg.gz
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\87xlo8ns38-4jjq1kgz1a.gz
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\99bzsy67yl-zl1o99k52e.gz
@@ -144,3 +143,4 @@ C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\refint\FitBack.
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\FitBack.pdb
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\FitBack.genruntimeconfig.cache
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\ref\FitBack.dll
+C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\cj3rn6iqt0-bztkfzee39.gz

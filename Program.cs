@@ -11,11 +11,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("LocalConnection");
 
-//var allowedOrigins = builder.Configuration["AllowedOrigins"];
-
-// Inicializa o banco
-//DbInitializer.Initialize(connectionString);
-
 var jwtKey = "sua-chave-super-secreta-com-32-caracteres!"; // Pode colocar no appsettings se quiser
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -53,8 +48,6 @@ builder.Services.AddSingleton(new JwtService(jwtKey)); // Troque por algo forte
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
-
-var repository = new DividaRepository(connectionString);
 
 var app = builder.Build();
 
