@@ -127,8 +127,6 @@ C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\FitBack.MvcAppl
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\FitBack.sourcelink.json
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\scopedcss\bundle\FitBack.styles.css
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\5nm4oqqe6q-197hosvljq.gz
-C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\9lsmm3hczz-9gs8ktddhg.gz
-C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\87xlo8ns38-4jjq1kgz1a.gz
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\99bzsy67yl-zl1o99k52e.gz
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\wepl2jc0wm-zw5q1xjpdw.gz
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\rea25972k6-3kfmdduen1.gz
@@ -144,3 +142,5 @@ C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\FitBack.pdb
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\FitBack.genruntimeconfig.cache
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\ref\FitBack.dll
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\cj3rn6iqt0-s0gyqe07s4.gz
+C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\9lsmm3hczz-gckwgjkwtb.gz
+C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\obj\Debug\net9.0\compressed\87xlo8ns38-iaz6aq41xs.gz

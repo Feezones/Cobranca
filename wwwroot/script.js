@@ -8,6 +8,8 @@ const apiUrl = 'https://localhost:7047/api/dividas'; // Altere se precisar
 document.addEventListener('DOMContentLoaded', loadDividas);
 document.getElementById('dividaForm').addEventListener('submit', saveDivida);
 
+var dividas;
+
 
 async function loadDividas() {
 
@@ -19,7 +21,7 @@ async function loadDividas() {
         }
     });
 
-    const dividas = await res.json();
+    dividas = await res.json();
 
 
     const tbody = document.querySelector('#dividasTable tbody');
@@ -107,7 +109,13 @@ async function deletarDivida(id) {
     if (!confirm('Tem certeza que deseja excluir esta dívida?')) return;
 
     try {
-        const res = await fetch(`${apiUrl}/${id}`, { method: 'DELETE' });
+        const res = await fetch(`${apiUrl}/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem('token'),
+                'Content-Type': 'application/json'
+            }
+        });
         if (!res.ok) throw new Error('Erro ao excluir');
         loadDividas();
     } catch (error) {
@@ -120,8 +128,6 @@ let editandoId = null;
 
 async function editarDivida(id) {
     try {
-        const res = await fetch(apiUrl);
-        const dividas = await res.json();
         const divida = dividas.find(d => d.id === id);
 
         if (!divida) return alert('Dívida não encontrada.');
