@@ -7,14 +7,6 @@
       "RelativeMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|c:\\users\\felipe.rozzi\\documents\\github\\cobranca\\wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|solutionrelative:wwwroot\\script.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|c:\\users\\felipe.rozzi\\documents\\github\\cobranca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|c:\\users\\felipe.rozzi\\documents\\github\\cobranca\\controllers\\dividacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D01751EE-9D7F-4A3C-9083-420C31C95EB2}|FitBack.csproj|solutionrelative:controllers\\dividacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 148,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,55 +58,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "script.js",
-              "DocumentMoniker": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\wwwroot\\script.js",
-              "RelativeDocumentMoniker": "wwwroot\\script.js",
-              "ToolTip": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\wwwroot\\script.js",
-              "RelativeToolTip": "wwwroot\\script.js",
-              "ViewState": "AgIAABgAAAAAAAAAAAAuwCwAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-07-22T21:09:06.913Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "index.html",
               "DocumentMoniker": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "wwwroot\\index.html",
               "ToolTip": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\wwwroot\\index.html",
               "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAMwFoAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAMwGUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-07-22T20:50:05.162Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "DividaController.cs",
               "DocumentMoniker": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\Controllers\\DividaController.cs",
               "RelativeDocumentMoniker": "Controllers\\DividaController.cs",
               "ToolTip": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\Controllers\\DividaController.cs",
               "RelativeToolTip": "Controllers\\DividaController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAC8AAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwC8AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T21:26:26.967Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAwwEkAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-21T20:05:22.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-21T21:26:26.967Z"
             }
           ]
         }

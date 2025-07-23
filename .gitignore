@@ -1,0 +1,60 @@
+﻿# Ignore arquivos e pastas de build
+bin/
+obj/
+out/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.dbmdl
+*.log
+
+# Ignore configurações de IDE
+.vscode/
+.vs/
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignore arquivos de publish
+publish/
+dist/
+artifacts/
+
+# Ignore arquivos temporários
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+
+# Ignore configurações locais
+appsettings.Local.json
+appsettings.Development.json
+
+# Ignore arquivos do Rider
+*.DotSettings.user
+
+# Ignore logs e dump
+logs/
+*.log
+*.dmp
+
+# Ignore arquivos do sistema operacional
+Thumbs.db
+ehthumbs.db
+.DS_Store
+desktop.ini
+
+# Ignore node_modules (caso use algo de frontend junto)
+node_modules/
+
+# wwwroot (NÃO ignore!)
+# NÃO ignore o wwwroot/ se você quiser versionar seus arquivos estáticos
+# Mas evite colocar arquivos temporários ou testes manuais aí
+
+# Se estiver usando SQLite
+*.db
+*.sqlite

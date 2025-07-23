@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "PXPG1lFXGXM=",
+  "dgSpecHash": "k/NtNe/GIcg=",
   "success": true,
   "projectFilePath": "C:\\Users\\felipe.rozzi\\Documents\\GitHub\\Cobranca\\FitBack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\felipe.rozzi\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\felipe.rozzi\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
+    "C:\\Users\\felipe.rozzi\\.nuget\\packages\\bogus\\35.6.3\\bogus.35.6.3.nupkg.sha512",
     "C:\\Users\\felipe.rozzi\\.nuget\\packages\\dapper\\2.1.66\\dapper.2.1.66.nupkg.sha512",
     "C:\\Users\\felipe.rozzi\\.nuget\\packages\\jwt\\11.0.0\\jwt.11.0.0.nupkg.sha512",
     "C:\\Users\\felipe.rozzi\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.7\\microsoft.aspnetcore.authentication.jwtbearer.9.0.7.nupkg.sha512",
