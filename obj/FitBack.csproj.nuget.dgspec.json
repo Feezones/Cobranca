@@ -52,10 +52,6 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
-            "Bogus": {
-              "target": "Package",
-              "version": "[35.6.3, )"
-            },
             "Dapper": {
               "target": "Package",
               "version": "[2.1.66, )"
@@ -75,6 +71,14 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[6.0.2, )"
+            },
+            "Microsoft.Data.Sqlite.Core": {
+              "target": "Package",
+              "version": "[9.0.7, )"
+            },
+            "SQLitePCLRaw.bundle_e_sqlite3": {
+              "target": "Package",
+              "version": "[2.1.11, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

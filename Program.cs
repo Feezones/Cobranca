@@ -1,15 +1,27 @@
 using FitBack.Controllers;
 using FitBack.DataBase;
+using FitBack.DbInit;
 using FitBack.Repositories;
 using FitBack.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Data.Sqlite;
 using Microsoft.IdentityModel.Tokens;
+using System.Data;
 using System.Text;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+SQLitePCL.Batteries.Init();
+
+builder.Services.AddScoped<IDbConnection>(sp =>
+{
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    return new SqliteConnection(connectionString);
+});
+
+builder.Services.AddScoped<UsuarioRepository>();
+builder.Services.AddScoped<DividaRepository>();
 
 var jwtKey = "sua-chave-super-secreta-com-32-caracteres!"; // Pode colocar no appsettings se quiser
 
@@ -38,8 +50,6 @@ builder.Services.AddCors(options =>
     });
 });
 
-builder.Services.AddSingleton(new UsuarioRepository(connectionString));
-builder.Services.AddSingleton(new DividaRepository(connectionString));
 builder.Services.AddSingleton(new JwtService(jwtKey)); // Troque por algo forte
 
 
@@ -50,6 +60,12 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
+    DatabaseInitializer.Initialize(connection);
+}
 
 app.UseAuthentication();
 app.UseAuthorization();

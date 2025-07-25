@@ -1,45 +1,42 @@
 ﻿using Dapper;
 using FitBack.Models;
 using Microsoft.Data.SqlClient;
+using System.Data;
 
 namespace FitBack.Repositories
 {
     public class DividaRepository
     {
-        private readonly string _connectionString;
+        private readonly IDbConnection _connectionString;
 
-        public DividaRepository(string connectionString)
+        public DividaRepository(IDbConnection connectionString)
         {
             _connectionString = connectionString;
         }
 
         public IEnumerable<Divida> GetByUser(int userId)
         {
-            using var connection = new SqlConnection(_connectionString);
-            return connection.Query<Divida>("SELECT * FROM Dividas WHERE UserId = @UserId", new { UserId = userId });
+            return _connectionString.Query<Divida>("SELECT * FROM Dividas WHERE UsuarioId = @UserId", new { UserId = userId });
         }
 
         public void Add(Divida divida)
         {
-            using var connection = new SqlConnection(_connectionString);
             var query = @"
             INSERT INTO Dividas 
             (Nome, Origem, ValorTotal, TotalParcelas, ParcelaAtual, ValorParcela, DataPagamento, ProximoVencimento, UserId)
             VALUES
             (@Nome, @Origem, @ValorTotal, @TotalParcelas, @ParcelaAtual, @ValorParcela, @DataPagamento, @ProximoVencimento, @UserId);
         ";
-            connection.Execute(query, divida);
+            _connectionString.Execute(query, divida);
         }
 
         public void Delete(int id)
         {
-            using var connection = new SqlConnection(_connectionString);
-            connection.Execute("DELETE FROM Dividas WHERE Id = @Id", new { Id = id });
+            _connectionString.Execute("DELETE FROM Dividas WHERE Id = @Id", new { Id = id });
         }
 
         public void Update(Divida divida)
         {
-            using var connection = new SqlConnection(_connectionString);
             var query = @"
             UPDATE Dividas SET
             Nome = @Nome,
@@ -52,7 +49,7 @@ namespace FitBack.Repositories
             ProximoVencimento = @ProximoVencimento
             WHERE Id = @Id;
         ";
-            connection.Execute(query, divida);
+            _connectionString.Execute(query, divida);
         }
     }
 }
