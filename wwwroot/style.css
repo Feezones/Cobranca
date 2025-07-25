@@ -1,3 +1,16 @@
 body {
     background-color: #f8f9fa;
 }
+
+.status-vencida {
+    background-color: #f8d7da !important; /* vermelho claro */
+}
+
+.status-paga {
+    background-color: #d1e7dd !important; /* verde claro */
+}
+
+.status-proxima {
+    background-color: #fff3cd !important; /* amarelo claro */
+}
+

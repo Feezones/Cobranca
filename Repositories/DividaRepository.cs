@@ -23,7 +23,7 @@ namespace FitBack.Repositories
         {
             var query = @"
             INSERT INTO Dividas 
-            (Nome, Origem, ValorTotal, TotalParcelas, ParcelaAtual, ValorParcela, DataPagamento, ProximoVencimento, UserId)
+            (Nome, Origem, ValorTotal, TotalParcelas, ParcelaAtual, ValorParcela, DataPagamento, ProximoVencimento, UsuarioId)
             VALUES
             (@Nome, @Origem, @ValorTotal, @TotalParcelas, @ParcelaAtual, @ValorParcela, @DataPagamento, @ProximoVencimento, @UserId);
         ";
