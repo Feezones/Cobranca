@@ -1,10 +1,8 @@
 using FitBack.Controllers;
-using FitBack.DataBase;
-using FitBack.DbInit;
 using FitBack.Repositories;
 using FitBack.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Data.Sqlite;
+using Microsoft.Data.SqlClient;
 using Microsoft.IdentityModel.Tokens;
 using System.Data;
 using System.Text;
@@ -12,13 +10,8 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-SQLitePCL.Batteries.Init();
-
 builder.Services.AddScoped<IDbConnection>(sp =>
-{
-    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-    return new SqliteConnection(connectionString);
-});
+    new SqlConnection(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<UsuarioRepository>();
 builder.Services.AddScoped<DividaRepository>();
@@ -60,12 +53,6 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
-
-using (var scope = app.Services.CreateScope())
-{
-    var connection = scope.ServiceProvider.GetRequiredService<IDbConnection>();
-    DatabaseInitializer.Initialize(connection);
-}
 
 app.UseAuthentication();
 app.UseAuthorization();

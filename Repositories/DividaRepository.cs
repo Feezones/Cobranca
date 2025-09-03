@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using FitBack.Models;
 using Microsoft.Data.SqlClient;
+using System.Collections;
 using System.Data;
 
 namespace FitBack.Repositories
@@ -14,9 +15,23 @@ namespace FitBack.Repositories
             _connectionString = connectionString;
         }
 
-        public IEnumerable<Divida> GetByUser(int userId)
+        public async Task<DividaMensal> GetByUser(int userId)
         {
-            return _connectionString.Query<Divida>("SELECT * FROM Dividas WHERE UsuarioId = @UserId", new { UserId = userId });
+            var dividaMensal = await _connectionString.QueryFirstOrDefaultAsync<DividaMensal>(
+                "SELECT * FROM DividaMensal WHERE UserId = @UserId", new { UserId = userId });
+
+            if (dividaMensal != null)
+                dividaMensal.DividaDiaria = await GetByMes(dividaMensal.Id);
+
+            return dividaMensal;
+        }
+
+        public async Task<List<DividaDiaria>> GetByMes(int mesId)
+        {
+            var dividaDiaria = await _connectionString.QueryAsync<DividaDiaria>(
+                "SELECT * FROM DividaDiaria WHERE IdDividaMensal = @IdDividaMensal", new { IdDividaMensal = mesId });
+
+            return dividaDiaria.ToList();
         }
 
         public void Add(Divida divida)

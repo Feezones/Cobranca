@@ -16,20 +16,20 @@ namespace FitBack.Repositories
 
         public Usuario? GetByEmail(string email)
         {
-            return _connectionString.QueryFirstOrDefault<Usuario>("SELECT * FROM Usuarios WHERE Email = @Email", new { Email = email });
+            return _connectionString.QueryFirstOrDefault<Usuario>("SELECT * FROM Usuario WHERE Email = @Email", new { Email = email });
         }
 
         public async Task Criar(Usuario usuario)
         {
             await _connectionString.ExecuteAsync(
-                @"INSERT INTO Usuarios (Nome, Email, SenhaHash)
+                @"INSERT INTO Usuario (Nome, Email, SenhaHash)
               VALUES (@Nome, @Email, @SenhaHash)", usuario);
         }
 
         public async Task<bool> EmailExiste(string email)
         {
             var result = await _connectionString.QueryFirstOrDefaultAsync<Usuario>(
-                "SELECT * FROM Usuarios WHERE Email = @Email", new { Email = email });
+                "SELECT * FROM Usuario WHERE Email = @Email", new { Email = email });
 
             return result != null;
         }

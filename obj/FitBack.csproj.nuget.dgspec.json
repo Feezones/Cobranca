@@ -70,15 +70,7 @@
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[6.0.2, )"
-            },
-            "Microsoft.Data.Sqlite.Core": {
-              "target": "Package",
-              "version": "[9.0.7, )"
-            },
-            "SQLitePCLRaw.bundle_e_sqlite3": {
-              "target": "Package",
-              "version": "[2.1.11, )"
+              "version": "[6.1.1, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
@@ -104,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

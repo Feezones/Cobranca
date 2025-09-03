@@ -2,13 +2,13 @@ wwwroot\auth\cadastro\cadastro.html
 wwwroot\auth\cadastro\cadastro.js
 wwwroot\auth\login\login.html
 wwwroot\auth\login\login.js
-wwwroot\style.css
 wwwroot\index.html
 wwwroot\script.js
-C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\auth\cadastro\cadastro.html
+wwwroot\style.css
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\auth\cadastro\cadastro.js
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\auth\login\login.html
-C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\auth\login\login.js
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\style.css
-C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\index.html
+C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\auth\cadastro\cadastro.html
+C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\auth\login\login.js
 C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\script.js
+C:\Users\felipe.rozzi\Documents\GitHub\Cobranca\wwwroot\index.html
